@@ -9,7 +9,10 @@ M.dap = {
           "Add breakpoint at line",
         },
         ["<F5>"] = {
-          "<cmd> DapContinue <CR>",
+            function ()
+                require('dap.ext.vscode').load_launchjs(nil, { cppdbg = {'c', 'cpp'} })
+                require('dap').continue()
+            end,
           "Start or continue the debugger",
         },
         ["<F17>"] = {
