@@ -36,6 +36,11 @@ local plugins = {
         },
     },
     {
+        "NvChad/ui",
+        branch = "v2.0",
+        lazy = true,
+    },
+    {
         "Civitasv/cmake-tools.nvim",
         event = "VeryLazy",
         config = function ()
